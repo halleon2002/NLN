@@ -1,4 +1,4 @@
-package com.qlpk.QLPK.controller;
+package com.qlpk.QLPK.model;
 
-public class DoctorController {
+public class Doctor {
 }

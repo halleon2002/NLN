@@ -1,2 +1,4 @@
-package com.qlpk.QLPK.controller;public class Patient {
+package com.qlpk.QLPK.controller;
+
+public class PatientController {
 }
