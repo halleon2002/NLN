@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý phòng khám</title>
+</head>
+<body>
+<h1>Danh Sách Bệnh Nhân</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Họ và Tên</th>
+        <th>Giới Tính</th>
+        <th>Ngày Sinh</th>
+        <th>Địa Chỉ</th>
+        <th>Số Điện Thoại</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each = "BenhNhan :${nbenhnhan}">
+        <td th:text = "${BenhNhan.MaBN}"></td>
+        <td th:text = "${BenhNhan.HoTen}"></td>
+        <td th:text = "${BenhNhan.GioiTinh}"></td>
+        <td th:text = "${BenhNhan.NgaySinh}"></td>
+        <td th:text = "${BenhNhan.DiaChi}"></td>
+        <td th:text = "${BenhNhan.SDT}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
