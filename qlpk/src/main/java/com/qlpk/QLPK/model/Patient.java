@@ -7,13 +7,6 @@ public class Patient {
     private String gender;
     private String address;
     private String phoneNumber;
-    private String email;
-    private String bloodGroup;
-    private double height;
-    private double weight;
-    private String medicalHistory;
-    private String medications;
-    private String testResults;
     public Patient(){
 
     }
