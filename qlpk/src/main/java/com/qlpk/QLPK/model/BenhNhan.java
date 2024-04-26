@@ -3,26 +3,32 @@ package com.qlpk.QLPK.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "BenhNhan")
 public class BenhNhan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @Column(name="HoTen", nullable = false)
     private String ten;
-    private int tuoi;
+    @Column(name="GioiTinh", nullable = false)
     private String gioiTinh;
+    @Column(name="NgaySinh", nullable = false)
+    private int ngaySinh;
+    @Column(name="DiaChi", nullable = false)
     private String diaChi;
+    @Column(name="SDT", nullable = false)
     private String soDT;
+
     public BenhNhan(){
 
     }
 
-    public BenhNhan(long id, String ten, int tuoi, String gioiTinh, String diaChi, String soDienThoai) {
-        this.id = id;
+    public BenhNhan(String ten, String gioiTinh, int ngaySinh, String diaChi, String soDienThoai) {
+        super();
         this.ten = ten;
-        this.tuoi = tuoi;
         this.gioiTinh = gioiTinh;
+        this.ngaySinh = ngaySinh;
         this.diaChi = diaChi;
         this.soDT = soDienThoai;
     }
@@ -42,12 +48,12 @@ public class BenhNhan {
         this.ten = ten;
     }
 
-    public int getTuoi() {
-        return tuoi;
+    public int getNgaySinh() {
+        return ngaySinh;
     }
 
-    public void setTuoi(int tuoi) {
-        this.tuoi = tuoi;
+    public void setNgaySinh(int ngaySinh) {
+        this.ngaySinh = ngaySinh;
     }
 
     public String getGioitinh() {
