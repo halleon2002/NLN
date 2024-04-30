@@ -1,32 +1,32 @@
-package com.qlpk.QLPK.model;
+package com.qlpk.QLPK.entity;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "BenhNhan")
+@Table(name = "benhnhan")
 public class BenhNhan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="HoTen", nullable = false)
-    private String ten;
-    @Column(name="GioiTinh", nullable = false)
+    @Column(name="hoten", nullable = false)
+    private String tenBenhNhan;
+    @Column(name="gioitinh", nullable = false)
     private String gioiTinh;
-    @Column(name="NgaySinh", nullable = false)
+    @Column(name="ngaysinh", nullable = false)
     private int ngaySinh;
-    @Column(name="DiaChi", nullable = false)
+    @Column(name="diachi", nullable = false)
     private String diaChi;
-    @Column(name="SDT", nullable = false)
+    @Column(name="sdt", nullable = false)
     private String soDT;
 
     public BenhNhan(){
 
     }
 
-    public BenhNhan(String ten, String gioiTinh, int ngaySinh, String diaChi, String soDienThoai) {
+    public BenhNhan(String tenBenhNhan, String gioiTinh, int ngaySinh, String diaChi, String soDienThoai) {
         super();
-        this.ten = ten;
+        this.tenBenhNhan = tenBenhNhan;
         this.gioiTinh = gioiTinh;
         this.ngaySinh = ngaySinh;
         this.diaChi = diaChi;
@@ -40,12 +40,12 @@ public class BenhNhan {
         this.id = id;
     }
 
-    public String getTen() {
-        return ten;
+    public String getTenBenhNhan() {
+        return tenBenhNhan;
     }
 
-    public void setTen(String ten) {
-        this.ten = ten;
+    public void setTenBenhNhan(String tenBenhNhan) {
+        this.tenBenhNhan = tenBenhNhan;
     }
 
     public int getNgaySinh() {
@@ -78,5 +78,17 @@ public class BenhNhan {
 
     public void setSoDT(String soDT) {
         this.soDT = soDT;
+    }
+
+    @Override
+    public String toString() {
+        return "BenhNhan{" +
+                "id=" + id +
+                ", ten='" + tenBenhNhan + '\'' +
+                ", gioiTinh='" + gioiTinh + '\'' +
+                ", ngaySinh=" + ngaySinh +
+                ", diaChi='" + diaChi + '\'' +
+                ", soDT='" + soDT + '\'' +
+                '}';
     }
 }
