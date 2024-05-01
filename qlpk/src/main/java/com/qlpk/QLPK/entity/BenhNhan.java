@@ -2,6 +2,7 @@ package com.qlpk.QLPK.entity;
 
 import jakarta.persistence.*;
 
+
 @Entity
 @Table(name = "benhnhan")
 public class BenhNhan {
@@ -14,7 +15,7 @@ public class BenhNhan {
     @Column(name="gioitinh", nullable = false)
     private String gioiTinh;
     @Column(name="ngaysinh", nullable = false)
-    private int ngaySinh;
+    private String ngaySinh;
     @Column(name="diachi", nullable = false)
     private String diaChi;
     @Column(name="sdt", nullable = false)
@@ -24,14 +25,15 @@ public class BenhNhan {
 
     }
 
-    public BenhNhan(String tenBenhNhan, String gioiTinh, int ngaySinh, String diaChi, String soDienThoai) {
-        super();
+    public BenhNhan(Long id, String tenBenhNhan, String gioiTinh, String ngaySinh, String diaChi, String soDT) {
+        this.id = id;
         this.tenBenhNhan = tenBenhNhan;
         this.gioiTinh = gioiTinh;
         this.ngaySinh = ngaySinh;
         this.diaChi = diaChi;
-        this.soDT = soDienThoai;
+        this.soDT = soDT;
     }
+
     public Long getId() {
         return id;
     }
@@ -48,20 +50,20 @@ public class BenhNhan {
         this.tenBenhNhan = tenBenhNhan;
     }
 
-    public int getNgaySinh() {
-        return ngaySinh;
-    }
-
-    public void setNgaySinh(int ngaySinh) {
-        this.ngaySinh = ngaySinh;
-    }
-
-    public String getGioitinh() {
+    public String getGioiTinh() {
         return gioiTinh;
     }
 
-    public void setGioitinh(String gioiTinh) {
+    public void setGioiTinh(String gioiTinh) {
         this.gioiTinh = gioiTinh;
+    }
+
+    public String getNgaySinh() {
+        return ngaySinh;
+    }
+
+    public void setNgaySinh(String ngaySinh) {
+        this.ngaySinh = ngaySinh;
     }
 
     public String getDiaChi() {
@@ -84,7 +86,7 @@ public class BenhNhan {
     public String toString() {
         return "BenhNhan{" +
                 "id=" + id +
-                ", ten='" + tenBenhNhan + '\'' +
+                ", tenBenhNhan='" + tenBenhNhan + '\'' +
                 ", gioiTinh='" + gioiTinh + '\'' +
                 ", ngaySinh=" + ngaySinh +
                 ", diaChi='" + diaChi + '\'' +

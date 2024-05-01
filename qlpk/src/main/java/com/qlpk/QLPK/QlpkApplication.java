@@ -7,18 +7,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class QlpkApplication implements CommandLineRunner {
+public class QlpkApplication {
 
 	public static void main(String[] args) {
 
 		SpringApplication.run(QlpkApplication.class, args);
-	}
-
-	@Autowired
-	private BenhNhanRepository benhNhanRepository;
-
-	@Override
-	public void run(String... args) throws Exception {
-
 	}
 }

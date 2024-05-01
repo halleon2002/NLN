@@ -9,9 +9,9 @@ public class Thuoc {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name = "tenthuoc")
+    @Column(name = "tenthuoc", nullable = false)
     private String tenThuoc;
-    @Column(name = "soluong")
+    @Column(name = "nhasanxuat", nullable = false)
     private String nhaSanXuat;
 
     public Thuoc() {

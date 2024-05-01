@@ -7,14 +7,28 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/")
+@RequestMapping("/api/v1")
 public class BenhNhanController {
+
     @Autowired
     private BenhNhanRepository benhNhanRepository;
 
-    @GetMapping("/benhnhan")
-    public List<BenhNhan> getAllnBenhNhan(){
+    public BenhNhanController(BenhNhanRepository benhNhanRepository){
+        super();
+        this.benhNhanRepository = benhNhanRepository;
+    }
+
+    @PostMapping("/them")
+    public BenhNhan createBenhNhan(@RequestBody BenhNhan benhNhan){
+        return benhNhanRepository.save(benhNhan);
+    }
+
+    @GetMapping("them")
+    public List<BenhNhan>getAllBenhNhan(){
+
         return benhNhanRepository.findAll();
     }
+
+
 
 }
