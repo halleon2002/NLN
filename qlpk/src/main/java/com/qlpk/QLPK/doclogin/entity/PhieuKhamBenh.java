@@ -10,15 +10,14 @@ public class PhieuKhamBenh {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(name ="mabenhnhan", nullable = false)
+    private String maBN;
     @Column(name ="ngaykham", nullable = false)
     private String ngayKham;
     @Column(name ="tenbacsi", nullable = false)
     private String tenBacSi;
-    @Column(name ="tenbenhnhan", nullable = false)
-    private String tenBenhNhan;
-
     @Column(name ="trieuchung", nullable = false)
-    private String trieuchung;
+    private String trieuChung;
     @Column(name ="ketqua", nullable = false)
     private String ketQua;
     @Column(name ="loaibenh", nullable = false)
@@ -51,20 +50,20 @@ public class PhieuKhamBenh {
         this.tenBacSi = tenBacSi;
     }
 
-    public String getTenBenhNhan() {
-        return tenBenhNhan;
+    public String getMaBN() {
+        return maBN;
     }
 
-    public void setTenBenhNhan(String tenBenhNhan) {
-        this.tenBenhNhan = tenBenhNhan;
+    public void setMaBN(String maBN) {
+        this.maBN = maBN;
     }
 
-    public String getTrieuchung() {
-        return trieuchung;
+    public String getTrieuChung() {
+        return trieuChung;
     }
 
-    public void setTrieuchung(String trieuchung) {
-        this.trieuchung = trieuchung;
+    public void setTrieuChung(String trieuChung) {
+        this.trieuChung = trieuChung;
     }
 
     public String getKetQua() {

@@ -1,0 +1,75 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+
+    <a style="color: white;" class="navbar-brand" href="#">MEDICAL CARE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+                <a style="color: white;" class="nav-link active" aria-current="page" href="javascript:void(0);"
+                    routerLink="/create-phieukhambenh">Tạo Phiếu Khám Bệnh</a>
+            </li>
+            <li class="nav-item">
+                <a style="color: white;" class="nav-link active" aria-current="page" href="javascript:void(0);"
+                    routerLink="/admin">Bệnh nhân</a>
+            </li>
+
+        </ul>
+
+        <div class="mx-2">
+
+            <button style="margin: 5px;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a
+                    style="color:white;" href="javascript:void(0);" routerLink="/home">Log Out</a></button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="container">
+    <hr>
+    <h2 style="text-align: center;margin-top: 20PX;">PHIẾU KHÁM BỆNH</h2>
+    <hr>
+    <!-- <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search" (input)="searchPatients()"> -->
+    <br>
+    <a style="color: rgb(86, 86, 86); font-size: xx-large;">DANH SÁCH PHIẾU KHÁM BỆNH</a>
+    <div class="tableFixHead">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Mã Bệnh Nhân</th>
+                    <th>Ngày Khám</th>
+                    <th>Tên Bác Sĩ</th>
+                    <th>Triệu Chứng</th>
+                    <th>Kết Quả</th>
+                    <th>Loại Bệnh</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let phieukhambenh of nphieukhambenh">
+                    <td>{{phieukhambenh.id}}</td>
+                    <td>{{phieukhambenh.maBN}}</td>
+                    <td>{{phieukhambenh.ngayKham}}</td>
+                    <td>{{phieukhambenh.tenBacSi}}</td>
+                    <td>{{phieukhambenh.trieuChung}}</td>
+                    <td>{{phieukhambenh.ketQua}}</td>
+                    <td>{{phieukhambenh.loaiBenh}}</td>
+                    <td>
+                        <button class="btn btn-danger" (click)="delete(phieukhambenh.id)">Delete</button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+
+        </table>
+    </div>
+</div>

@@ -11,17 +11,17 @@ public class Thuoc {
     private long id;
     @Column(name = "tenthuoc", nullable = false)
     private String tenThuoc;
-    @Column(name = "nhasanxuat", nullable = false)
-    private String nhaSanXuat;
+    @Column(name = "soluong", nullable = false)
+    private int soLuong;
 
     public Thuoc() {
     }
 
 
-    public Thuoc(long id, String tenThuoc, String nhaSanXuat) {
+    public Thuoc(long id, String tenThuoc, int soLuong) {
         this.id = id;
         this.tenThuoc = tenThuoc;
-        this.nhaSanXuat = nhaSanXuat;
+        this.soLuong = soLuong;
     }
 
     public long getId() {
@@ -40,11 +40,11 @@ public class Thuoc {
         this.tenThuoc = tenThuoc;
     }
 
-    public String getNhaSanXuat() {
-        return nhaSanXuat;
+    public int getSoLuong() {
+        return soLuong;
     }
 
-    public void setNhaSanXuat(String nhaSanXuat) {
-        this.nhaSanXuat = nhaSanXuat;
+    public void setSoLuong(int soLuong) {
+        this.soLuong = soLuong;
     }
 }

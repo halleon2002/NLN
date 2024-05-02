@@ -1,0 +1,28 @@
+<table>
+    <thead>
+        <tr>
+
+            <th>ID</th>
+            <th>Mã Bệnh Nhân</th>
+            <th>Tên Bệnh Nhân</th>
+            <th>Liều lượng</th>
+            <th>Đơn Thuốc</th>
+            <th>Kết Quả</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let benhnhan of nbenhnhan">
+            <tr>
+                <td>{{benhnhan.id}}</td>
+                <td>{{benhnhan.maBN}}</td>
+                <td>{{benhnhan.tenBenhNhan}}</td>
+                <td>{{benhnhan.mes}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+
+
+
+
+</table>

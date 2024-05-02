@@ -1,0 +1,75 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+
+    <a style="color: white;" class="navbar-brand" href="#">MEDICAL CARE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+                <a style="color: white;" class="nav-link active" aria-current="page" href="javascript:void(0);"
+                    routerLink="/phieukhambenhlist">Phiếu Khám Bệnh</a>
+            </li>
+
+        </ul>
+
+        <div class="mx-2">
+
+            <button style="margin: 5px;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a
+                    style="color:white;" href="javascript:void(0);" routerLink="/home">Log Out</a></button>
+
+        </div>
+
+    </div>
+
+</nav>
+<div class="container">
+
+    <h2 class="text-center">Tạo Phiếu Khám Bệnh</h2>
+
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+
+            <label>Mã Bệnh Nhân</label>
+            <input type="text" id="idBN" class="form-control" name="idBN" placeholder="Nhập mã bệnh nhân"
+                [(ngModel)]="phieukhambenh.maBN">
+
+        </div>
+        <div class="form-group">
+            <label>Ngày Khám</label>
+            <input type="text" id="ngayKham" class="form-control" name="ngayKham" placeholder="Nhập ngày khám"
+                [(ngModel)]="phieukhambenh.ngayKham">
+        </div>
+
+        <div class="form-group">
+            <label>Tên Bác Sĩ</label>
+            <input type="text" id="tenBacSi" class="form-control" name="tenBacSi" placeholder="Nhập tên bác sĩ"
+                [(ngModel)]="phieukhambenh.tenBacSi">
+        </div>
+
+        <div class="form-group">
+            <label>Triệu Chứng</label>
+            <input type="text" id="trieuChung" class="form-control" name="trieuChung" placeholder="Nhập triệu chứng"
+                [(ngModel)]="phieukhambenh.trieuChung">
+        </div>
+        <div class="form-group">
+            <label>Loại Bệnh</label>
+            <input type="text" id="loaiBenh" class="form-control" name="loaiBenh" placeholder="Nhập loại Bệnh"
+                [(ngModel)]="phieukhambenh.loaiBenh">
+        </div>
+
+        <div class="form-group">
+            <label>Kết Quả</label>
+            <input type="text" id="ketQua" class="form-control" name="ketQua" placeholder="Nhập kết Quả"
+                [(ngModel)]="phieukhambenh.ketQua">
+        </div>
+
+
+
+        <button type="submit" class="btn btn-success">Tạo</button>
+    </form>
+
+</div>
